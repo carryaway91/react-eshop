@@ -1,0 +1,19 @@
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+::selection {
+  color: white;
+  background: black
+}
+body {
+  margin: 0;
+  padding: 0
+}
+
+.App {
+  text-align: center;
+  background: #443c3d;
+  min-height: 100vh
+
+}

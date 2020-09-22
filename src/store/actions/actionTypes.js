@@ -1,0 +1,30 @@
+export const SHOW_PREVIEW_MOBILE = 'SHOW_PREVIEW_MOBILE'
+export const SLIDE_UP = 'SLIDE_UP'
+export const SLIDE_DOWN = 'SLIDE_DOWN'
+export const SHOW_MOBILE = 'SHOW_MOBILE'
+
+export const SET_FILTERED_PRODUCTS = 'SET_FILTERED_PRODUCTS'
+
+//Fetch products 
+export const FETCH_PRODUCTS = 'FETCH_PRODUCTS'
+export const FETCH_PRODUCT = 'FETCH_PRODUCT'
+
+
+// filters by brand
+export const ADD_FILTERED_BRAND = 'FILTER_BY_BRAND'
+export const REMOVE_FILTERED_BRAND = 'REMOVE_FILTERED_BRAND'
+export const SHOW_ALL_BRANDS = 'SHOW_ALL_BRANDS'
+
+// dropdown filters
+export const SHOW_CHEAPEST = 'SHOW_CHEAPEST' 
+export const SHOW_THE_MOST_EXPENSIVE = 'SHOW_THE_MOST_EXPENSIVE' 
+export const SHOW_TOP_RATED = 'SHOW_TOP_RATED' 
+
+// cart
+export const ADD_TO_CART = 'ADD_TO_CART'
+export const LOAD_CART_ITEMS = 'LOAD_CART_ITEMS'
+export const REMOVE_CART_ITEM = 'REMOVE_CART_ITEM'
+
+export const FILTER_BY_PRICE = 'FILTER_BY_PRICE'
+export const FILTER_BY_MEMORY = 'FILTER_BY_MEMORY'
+

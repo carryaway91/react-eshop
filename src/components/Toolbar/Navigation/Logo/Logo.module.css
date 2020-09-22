@@ -1,0 +1,10 @@
+.Logo {
+    font-size: 3rem;
+    color: black;
+    margin: 0;
+    font-weight: bold;
+}
+
+.Logo span {
+    color: #ffc400;
+}

@@ -1,0 +1,122 @@
+.Homepage {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.Product_name {
+    font-size: 4.2em;
+    text-align: left;
+    z-index: 2;
+    margin: 0rem 0 2rem 0;
+    color: black;
+    text-shadow: 3px 1px 8px #00000075;
+}   
+
+.Product_name_model:before {
+    content: '';
+    width: 86%;
+    height: 19px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-image: linear-gradient(45deg, #a0aba6, transparent);
+    z-index: -1
+}
+
+.Product_name_model {
+    display: inline-block;
+    position: relative;
+    z-index: 2
+}
+
+.Product_details_list {
+    text-align: left;
+    margin-left: 11%;
+    z-index:2;
+}
+.Product_details_item {
+    padding: .3em 0;
+    list-style-type: square;
+    color: black
+}
+
+.Details {
+    margin-left: 6%;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+
+ /** Display telefonu a overlayu*/
+.Display {
+    display: flex;
+    flex: 2;
+    justify-content: flex-end
+}
+
+.Display_img {
+    position: relative;
+    z-index: 1;
+    width: 25rem;
+    height: 25rem;
+}
+
+.Underlay {
+    position: absolute;
+    z-index: -1;
+    width: 110%;
+    height: 100%;
+    top: -21px;
+    right: -95px;
+    opacity: .4;
+    animation: move 20s infinite;
+    -moz-animation: move 20s infinite;
+}
+
+.Underlay_pic {
+    max-width: 110%
+}
+
+.Underlay_img {
+    max-width: 110%
+}
+
+@keyframes move {
+    0% { transform: translate(0) }
+    50% { transform: translate(-20px)}
+    100% { transform: translate(0)}
+}
+
+.Appear-enter {
+    opacity: 0
+}
+
+.Appear-enter-active {
+    opacity: 1;
+    transition: opacity 300ms
+}
+
+.Appear-exit {
+    opacity: 1
+}
+
+.Appaer-exit-active {
+    opacity: 0;
+    transition: opacity 300ms
+}
+
+.MoreLink {
+    display: inline-block;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    width: 100%;
+    padding: 1.5rem 2rem
+}
+
+.MoreLinkWrap {
+    width: 400px;
+    border: none;
+    background-color: #ffc400
+}

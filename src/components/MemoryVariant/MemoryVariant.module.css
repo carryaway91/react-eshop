@@ -1,0 +1,8 @@
+.MemoryVariant {
+    margin-right: 1rem;
+    cursor: pointer
+}
+
+.ActiveMemory {
+    border-bottom: 3px solid #ffc400 
+}

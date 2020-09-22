@@ -1,0 +1,11 @@
+.ColorVariants {
+    display: inline-block;
+    width: 3rem;
+    height: 1.5rem;
+    margin-right: 1rem;
+    cursor: pointer
+}
+
+.ActiveVariant {
+    border: 2px solid #ffc400
+}

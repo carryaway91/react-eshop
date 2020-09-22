@@ -1,0 +1,22 @@
+.TheNavigation,
+.TheNavigation ul {
+    display: flex;
+}
+
+.TheNavigation ul {
+    align-items: center;
+}
+.TheNavigation ul li {
+    list-style-type: none;
+    padding: .5rem
+}
+
+.TheNavigation a {
+    text-decoration: none;
+    color: #a0aba6
+}
+
+.ActiveLink {
+    padding-bottom: 4px;
+    border-bottom: 2px solid #a0aba6
+}

@@ -1,0 +1,18 @@
+.CartNotification {
+    width: 20px;
+    display: flex;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: red;
+    font-size: .8rem;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    top: -40px;
+    right: -10px;
+}
+
+.Cart {
+    position: relative
+}

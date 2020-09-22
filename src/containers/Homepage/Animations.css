@@ -1,0 +1,67 @@
+.Appear-enter {
+    opacity: 0;
+    transform: translateX(-100%)
+}
+
+.Appear-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 500ms ease-out 
+
+}
+
+.Appear-exit {
+    opacity: 1;
+    transform: translateX(0)
+
+}
+
+.Appear-exit-active {
+    opacity: 0;
+    transition: all 500ms ease-out
+
+}
+
+.slide-down-enter {
+    opacity: 0;
+    transform: translateY(-100%)
+}
+
+.slide-down-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 500ms ease-out
+}
+
+.slide-down-exit {
+    opacity: 1;
+    transform: translateY(0)
+}
+
+.slide-down-exit-active {
+    opacity: 0;
+    transition: all 500ms ease-out
+}
+
+
+
+.disappear-enter {
+    opacity:0
+}
+
+
+.disappear-enter-active {
+    opacity: 1;
+    transition: all 500ms ease-out
+}
+
+
+.disappear-exit {
+    opacity:1
+}
+
+
+.disappear-exit-active {
+    opacity:0;
+    transition: all 500ms ease-out
+}

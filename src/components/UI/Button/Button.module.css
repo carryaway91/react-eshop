@@ -1,0 +1,24 @@
+.Button {
+    display: inline-block;
+    width: 11rem;
+    margin: 2rem 0 0 1rem;
+    padding: 1.2em .5em;
+    color: black;
+    z-index: 2;
+    border: none
+}
+
+.Button:hover {
+    cursor: pointer
+}
+.Button:active,
+.Button:focus {
+    outline: none
+}
+
+.Main {
+    background-color: #285193;
+    box-shadow: 0 2px 2px 1px #366ef7;
+    color: black;
+}
+

@@ -1,0 +1,4 @@
+.animate-on-transforms {
+    /* animate list item reorder */
+    transition: transform 500ms ease;
+  }

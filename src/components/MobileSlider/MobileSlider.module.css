@@ -1,0 +1,57 @@
+.Slider {
+    position: relative;
+    top: -17%;
+    margin-left: 12%;
+    padding: 1rem 0;
+    height: 24.8125rem;
+}
+
+
+.Product_list_wrap {
+    position: relative;
+    top: -24.3rem;
+    padding: 0 .2rem
+}
+
+.Product_list {
+    overflow: hidden;  
+    margin: 0;
+    height: 22.5rem;
+}
+
+
+.Nav-arrow {
+    position: absolute;
+    left: 25%;
+    color: rgba(184, 184, 184, 0.4);
+}
+.Nav-arrow:hover {
+    color: white
+}
+
+.Arrow {
+    transition: all .1s ease-in-out;
+   fill:#a0aba6
+}
+.Arrow:hover {
+    cursor: pointer;
+    fill: rgb(99, 99, 99);
+}
+/** sipky */
+.Up {
+    top: -8%;
+}
+
+.Down {
+    bottom: -6%
+}
+
+/** slider animation */
+
+.Slide-animation-wrap {
+    height:100%;
+}
+
+.Scroll-move {
+    transition: all .5s
+}
