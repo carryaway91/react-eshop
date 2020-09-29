@@ -12,51 +12,13 @@ import { Link } from 'react-router-dom';
 
 class Homepage extends Component {
 
-    state = {
-        show: true,
-    }
-
     componentDidMount = () => {
         this.props.fetchProducts()
-     //   this.setState({ visibleMobileId: this.props.displayed.id})
-    }
-    // po kliknuti sipky
-    handleAnimationTimout = () => {
-        this.setState((prevState) => {
-            return {
-                show: false
-            }
-        })
-        setTimeout(() => {
-            this.setState(prevState => {
-                return {
-                    show: true
-                }
-            })
-        }, 500)
     }
     
-    // po kliknuti na preview v slidery
-    handleChangeDisplayImg = (id, i) => {
-        this.setState({ visibleMobileId: id})
-        this.setState((prevState) => {
-            return {
-                show: false
-            }
-        })
-        
-        setTimeout(() => {
-            this.props.findPhone(id, i)
-            this.setState(prevState => {
-                return {
-                    show: true
-                }
-            })
-        }, 300)
-    }
     
     render() {
-        const { products, displayed } = this.props
+        const { displayed, show } = this.props
 
         return (
             <div className={styles.Homepage}>
@@ -65,7 +27,7 @@ class Homepage extends Component {
                     <Fragment>
                 <div className={styles.Details}>
                     <CSSTransition 
-                        in={this.state.show}
+                        in={show}
                         timeout={500}
                         classNames="Appear"
                         unmountOnExit
@@ -76,7 +38,7 @@ class Homepage extends Component {
                             <span className={styles.Product_name_model}>{ displayed.model }</span>
                         </h2>
                     </CSSTransition>
-                    <CSSTransition in={this.state.show}
+                    <CSSTransition in={show}
                         timeout={500}
                         classNames="slide-down"
                         unmountOnExit
@@ -88,7 +50,7 @@ class Homepage extends Component {
                                 <li className={styles.Product_details_item}>{ displayed.details.camera} MPX camera</li>
                             </ul>
                             <div className={styles.MoreLinkWrap}>
-                                <Link to={`/products/${this.props.visibleMobileID}`} className={styles.MoreLink}>See more!</Link>
+                                <Link to={`/products/${displayed.id}`} className={styles.MoreLink}>See more!</Link>
                             </div>
                         </div>
                     </CSSTransition>
@@ -97,7 +59,7 @@ class Homepage extends Component {
                 <div className={styles.Display}>
                     <div className={styles.Display_img}>
 
-                    <CSSTransition in={this.state.show}
+                    <CSSTransition in={show}
                         timeout={500}
                         classNames="disappear"
                         unmountOnExit
@@ -129,15 +91,14 @@ class Homepage extends Component {
 
 const mapStateToProps = state => {
     return {
+        show: state.products.show,
         displayed: state.products.displayedMobile,
-        visibleMobileID: state.products.visibleMobileID
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return {
         fetchProducts: () => dispatch(actionCreators.fetchProducts()),
-        findPhone: (id, i) => dispatch({ type: actionTypes.SHOW_PREVIEW_MOBILE, id: id, index: i })
     }
 }
 

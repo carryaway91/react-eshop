@@ -116,13 +116,13 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         fetchProducts: () => dispatch(actionCreators.fetchProducts()),
-        setFilteredProducts: () => dispatch({ type: actionTypes.SET_FILTERED_PRODUCTS }),
-        addBrand: (brand) => dispatch({ type: actionTypes.ADD_FILTERED_BRAND, brand: brand}),
-        removeBrand: (brand) => dispatch({ type: actionTypes.REMOVE_FILTERED_BRAND, brand: brand}),
-        showAllBrands: () => dispatch({ type: actionTypes.SHOW_ALL_BRANDS }),
-        showCheapest: () => dispatch({ type: actionTypes.SHOW_CHEAPEST}),
-        showMostExpensive: () => dispatch({ type: actionTypes.SHOW_THE_MOST_EXPENSIVE }),
-        showTopRated: () => dispatch({ type: actionTypes.SHOW_TOP_RATED })
+        setFilteredProducts: () => dispatch(actionCreators.setFilteredProducts),
+        addBrand: (brand) => dispatch(actionCreators.addFilteredBrand(brand)),
+        removeBrand: (brand) => dispatch(actionCreators.removeFilteredBrand(brand)),
+        showAllBrands: () => dispatch(actionCreators.showAllBrands()),
+        showCheapest: () => dispatch(actionCreators.showCheapest()),
+        showMostExpensive: () => dispatch(actionCreators.showMostExpensive()),
+        showTopRated: () => dispatch(actionCreators.showTopRated())
 
     }
 }

@@ -9,7 +9,6 @@ const ColorVariant = ({isActive, variant, selectVariant}) => {
     }
     const clicked = () => {
         selectVariant()
-
     }
     return (
         <div style={{ backgroundColor: variant.color}} 

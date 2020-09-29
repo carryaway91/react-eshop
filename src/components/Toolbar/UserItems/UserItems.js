@@ -1,8 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styles from './UserItem.module.css'
+import { connect } from 'react-redux'
+import { useEffect } from 'react'
+const UserItems = (props) => {
 
-const UserItems = () => {
+    const renderCartLength = () => {
+        if(props.cartLength.length > 0) {
+            return <p className={styles.CartNotification}>{ props.cartLength.length }</p>
+        } else {
+            return null
+        }
+    }
     return (
         <div style={{ width: '35px'}}>
 
@@ -33,10 +42,15 @@ const UserItems = () => {
                 </g>
                 </g>
             </svg>
-            <p className={styles.CartNotification}>5</p>
+            { renderCartLength() }
         </Link>
         </div>
     )
 }
 
-export default UserItems
+const mapStateToProps = state => {
+    return {
+        cartLength: state.cart.cart
+    }
+}
+export default connect(mapStateToProps)(UserItems)

@@ -9,8 +9,6 @@ const Navigation = () => {
             <Logo />
             <ul>
                 <li><NavLink activeClassName={styles.ActiveLink} to="/products" exact>Products</NavLink></li>
-                    
-                <li><a href="/">About</a></li>
             </ul>
         </nav>
     )

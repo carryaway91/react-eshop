@@ -1,3 +1,7 @@
-.CartWrapper {
-    dipslay: flex
+.Cart {
+    display: flex
+}
+
+.CartItems {
+    flex: 3
 }

@@ -1,9 +1,10 @@
 .Button {
     display: inline-block;
     width: 11rem;
-    margin: 2rem 0 0 1rem;
     padding: 1.2em .5em;
     color: black;
+    font-weight: bold;
+    background-color: #ffc400;
     z-index: 2;
     border: none
 }

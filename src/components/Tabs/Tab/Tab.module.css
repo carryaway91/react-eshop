@@ -1,0 +1,7 @@
+.Tab {
+    padding: .5rem 1rem
+}
+
+.Active {
+    background-color: rgba(0,0,0,.5)
+}

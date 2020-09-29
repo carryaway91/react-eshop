@@ -19,12 +19,11 @@
 .Appear-exit-active {
     opacity: 0;
     transition: all 500ms ease-out
-
 }
 
 .slide-down-enter {
     opacity: 0;
-    transform: translateY(-100%)
+    transform: translateY(-50%)
 }
 
 .slide-down-enter-active {

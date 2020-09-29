@@ -5,14 +5,17 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux'
 import { createStore, combineReducers, compose, applyMiddleware } from 'redux'
-import reducer from './store/reducers/reducer'
+import products from './store/reducers/products'
 import sliderReducer from './store/reducers/sliderReducer'
+import cartReducer from './store/reducers/cart'
+
 import thunk from 'redux-thunk'
 import { BrowserRouter } from 'react-router-dom'
 
 const rootReducer = combineReducers({
-  products: reducer,
-  slider: sliderReducer 
+  products: products,
+  slider: sliderReducer,
+  cart: cartReducer 
 })
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(rootReducer, composeEnhancer(applyMiddleware(thunk)))

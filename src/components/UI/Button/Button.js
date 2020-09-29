@@ -9,7 +9,7 @@ const Button = (props) => {
     }
     
     return (
-        <button className={classes.join(' ')}>
+        <button className={classes.join(' ')} onClick={props.clicked}>
             { props.children }
         </button>
     )

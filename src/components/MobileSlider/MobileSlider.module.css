@@ -26,16 +26,16 @@
     color: rgba(184, 184, 184, 0.4);
 }
 .Nav-arrow:hover {
-    color: white
+    color: #ffc400
 }
 
 .Arrow {
     transition: all .1s ease-in-out;
-   fill:#a0aba6
+   fill:#ffc40065
 }
 .Arrow:hover {
     cursor: pointer;
-    fill: rgb(99, 99, 99);
+    fill: #ffc400;
 }
 /** sipky */
 .Up {
