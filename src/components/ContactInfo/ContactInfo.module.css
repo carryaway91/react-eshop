@@ -2,7 +2,7 @@
     display: flex;
     flex: 3;
     justify-content: space-around;
-    background-color:rgba(255,255,255,.7);
+    background-color:rgba(255,255,255,.5);
     padding: 3rem 0
 }
 

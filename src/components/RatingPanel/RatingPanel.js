@@ -8,12 +8,12 @@ class RatingPanel extends Component {
         let stars = []
         
         for(let i = 0; i < this.props.rating ; i++) {
-            stars.push(<RatingStar fullness={true} />)
+            stars.push(<RatingStar key={i} fullness={true} />)
         }
         
         if(stars.length < 5) {
             for(let i = 0; i < 5 - this.props.rating; i++ ) {
-                stars.push(<RatingStar fullness={false} /> )
+                stars.push(<RatingStar key={i} fullness={false} /> )
          }
         }
         return (

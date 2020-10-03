@@ -76,8 +76,8 @@ class ProductShow extends Component {
                             </li>
                             <li className={styles.Product_details_row}>
                                     <p className={styles.Desc}>Color: &nbsp; { this.props.colorVariant }</p>
-                                    { this.renderColorVariants().map(variant => {
-                                        return <ColorVariant variant={variant} selectVariant={() => this.props.changeColor(variant.desc)} isActive={this.props.colorVariant === variant.desc} />
+                                    { this.renderColorVariants().map((variant, i) => {
+                                        return <ColorVariant variant={variant} key={i} selectVariant={() => this.props.changeColor(variant.desc)} isActive={this.props.colorVariant === variant.desc} />
                                     })}
                                     {/************************************************** */}
                             </li>
