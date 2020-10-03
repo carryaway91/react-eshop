@@ -33,7 +33,7 @@ class Checkout extends Component {
                 <div style={{ display: 'flex'}}>
                     <OrderOverview/>
                     <div style={{ flex: '1', textAlign:'right'}}>
-                        <p><strong>Amount to pay: </strong> { this.props.totalPrice } &euro;</p>
+                        <p style={{ marginTop: '1rem'}}><strong>Amount to pay: </strong> { this.props.totalPrice } &euro;</p>
                         <Button disabled={this.props.userInfo == null || this.props.cartItems.length == 0 } clicked={() => this.props.placeOrder(this.props.cartItems, this.props.userInfo, this.state.ownProps)}> Place an order!</Button>
                     </div>
                 </div>

@@ -19,19 +19,19 @@ const DetailTab = ({ details }) => {
                 </tr>
                 <tr>
                     <td><strong>Ram</strong></td>
-                    <td>{ details.details.RAM}</td>
+                    <td>{ details.details.RAM}Gb</td>
                 </tr>
                 <tr>
                     <td><strong>Battery</strong></td>
-                    <td>{ details.details.battery}</td>
+                    <td>{ details.details.battery}mAh</td>
                 </tr>
                 <tr>
                     <td><strong>Size</strong></td>
-                    <td>{ details.details.size.height } x { details.details.size.width } x { details.details.size.thick }</td>
+                    <td>{ details.details.size.height }mm x { details.details.size.width }mm x { details.details.size.thick }mm</td>
                 </tr>
                 <tr>
                     <td><strong>Diagonal</strong></td>
-                    <td>{ details.details.diagonal}</td>
+                    <td>{ details.details.diagonal} inch</td>
                 </tr>
                 <tr>
                     <td><strong>Resolution</strong></td>
@@ -39,7 +39,7 @@ const DetailTab = ({ details }) => {
                 </tr>
                 <tr>
                     <td><strong>Weight</strong></td>
-                    <td>{ details.details.weight}</td>
+                    <td>{ details.details.weight}g</td>
                 </tr>
                 </tbody>
             </table>

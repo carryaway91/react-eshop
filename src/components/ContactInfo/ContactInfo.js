@@ -128,7 +128,10 @@ class ContactInfo extends Component {
         let checkValidity = validValues.every(v => v === true)
         
         if(checkValidity) {
-            this.setState({ formActive: false})
+            this.addContactInfo()
+            this.setState({ formActive: false, validForm: true })
+        } else {
+            this.setState({ validForm: false})
         }
 
     
@@ -138,9 +141,9 @@ class ContactInfo extends Component {
         const userInfo = {
             name: this.state.contactForm.name.value,
             address: this.state.contactForm.address.value
-        }
+        }   
         this.props.addContactInfo(userInfo)
-    }
+        }
     
     render() {
         let formArray = [] 
@@ -185,7 +188,7 @@ class ContactInfo extends Component {
                 { this.state.formActive ? (
                 <form style={{ marginRight: '2rem'}} onSubmit={(e) => this.submitContactData(e)}>
                     { form }
-                    <Button clicked={this.addContactInfo}>Confirm</Button>
+                    <Button>Confirm</Button>
                 </form>
                 ) :  contactSheet 
                 }

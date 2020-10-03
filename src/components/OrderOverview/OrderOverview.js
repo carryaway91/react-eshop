@@ -16,7 +16,7 @@ const OrderOverview = (props) => {
         cartItems = <p>No items in cart</p>
     }
     return (
-        <div>
+        <div style={{ flex: 2}}>
             <h2>Order summary</h2>
             { cartItems }
         </div>
