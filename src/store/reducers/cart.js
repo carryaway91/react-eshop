@@ -27,7 +27,7 @@ const addToCart = (state, action) => {
 }
 
 const loadCartItems = (state, action) => {
-    const items = JSON.parse(localStorage.getItem('cartItems'))
+    const items = JSON.parse(localStorage.getItem('cartItems')) || []
         let totalPrice = 0
         items.map(item => {
             totalPrice = totalPrice + item.priceAmount
