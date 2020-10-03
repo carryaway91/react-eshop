@@ -21,11 +21,11 @@ function App({ location }) {
           >
             <section className="route-section">
               <Switch location={location}>
-                <Route path="/" exact component={Homepage} />
-                <Route path="/products" exact component={ProductList} />
-                <Route path="/products/:id" exact component={ProductShow} />
-                <Route path="/cart" exact component={Cart} />
-                <Route path="/checkout" exact component={Checkout} />
+                <Route path="/react-eshop" exact component={Homepage} />
+                <Route path="/react-eshop/products" exact component={ProductList} />
+                <Route path="/react-eshop/products/:id" exact component={ProductShow} />
+                <Route path="/react-eshop/cart" exact component={Cart} />
+                <Route path="/react-eshop/checkout" exact component={Checkout} />
               </Switch>
             </section>
           </CSSTransition>
