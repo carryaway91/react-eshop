@@ -37,7 +37,7 @@ class ProductShow extends Component {
 
     goToCart = () => {
         this.props.addToCart(this.props.mobile, this.props.colorVariant, this.props.memoryVariant, this.props.price)
-        this.props.history.push('/cart')
+this.props.history.push('/react-shop/cart')
     }
 
     renderMobile = () => {

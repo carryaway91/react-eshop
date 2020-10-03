@@ -9,7 +9,6 @@ import * as actionCreators from '../../store/actions/index'
 
 import { CSSTransition } from 'react-transition-group'
 import { Link } from 'react-router-dom';
-import Spinner from '../../components/UI/Spinner/Spinner';
 
 class Homepage extends Component {
 
@@ -50,7 +49,7 @@ class Homepage extends Component {
                                 <li className={styles.Product_details_item}>{ displayed.details.camera} MPX camera</li>
                             </ul>
                             <div className={styles.MoreLinkWrap}>
-                                <Link to={`/products/${displayed.id}`} className={styles.MoreLink}>See more!</Link>
+                                <Link to={`/react-eshop/products/${displayed.id}`} className={styles.MoreLink}>See more!</Link>
                             </div>
                         </div>
                     </CSSTransition>

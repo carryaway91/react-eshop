@@ -23,11 +23,11 @@ const CartItem = (props) => {
     return (
         <div className={styles.ItemContainer}>
         <div style={{ display: 'flex', alignItems: 'center'}}>
-                <Link to={`/products/${props.product.product.id}`} style={{ textDecoration: 'none'}}>
+                <Link to={`/react-shop/products/${props.product.product.id}`} style={{ textDecoration: 'none'}}>
                     <img className={styles.ProductImage} src={ props.product.product.images.displayed } />
                 </Link>
                 <div style={{ marginLeft: '1rem'}}>
-                <Link to={`/products/${props.product.product.id}`} style={{ textDecoration: 'none', color: 'black'}}>
+                <Link to={`/react-shop/products/${props.product.product.id}`} style={{ textDecoration: 'none', color: 'black'}}>
                     <p className={styles.ProductName}>{ props.product.product.brand + ' ' + props.product.product.model }</p>
                 </Link>    
                     <p>{ props.product.color }</p>

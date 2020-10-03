@@ -16,7 +16,7 @@ const ProductItem = (props) => {
                 <RatingPanel rating={product.stars} />
                 <p className={styles.Pricing}>{ product.pricing } &euro;</p>
 
-                <Link to={`/products/${product.id}`} className={styles["Info-link"]}>More Info</Link>                
+                <Link to={`/react-shop/products/${product.id}`} className={styles["Info-link"]}>More Info</Link>                
             </div>
         </div>
     )
