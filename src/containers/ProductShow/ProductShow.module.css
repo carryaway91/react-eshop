@@ -193,3 +193,12 @@
     .fade-leave-to {
         opacity: 0
     }
+
+    .BrandOverlay {
+        font-size: 13rem;
+        position: absolute;
+        transform: rotate(90deg);
+        right: 0;
+        top:70%;
+        opacity: .2
+    }

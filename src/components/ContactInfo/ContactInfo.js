@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Input from '../UI/Input/Input'
 import styles from './ContactInfo.module.css'
 import Button from '../UI/Button/Button'
+import * as actionCreators from '../../store/actions/index'
+import {connect} from 'react-redux'
 class ContactInfo extends Component {
     state = {
         contactForm: {
@@ -128,7 +130,18 @@ class ContactInfo extends Component {
         if(checkValidity) {
             this.setState({ formActive: false})
         }
+
+    
     }
+
+    addContactInfo = () => {
+        const userInfo = {
+            name: this.state.contactForm.name.value,
+            address: this.state.contactForm.address.value
+        }
+        this.props.addContactInfo(userInfo)
+    }
+    
     render() {
         let formArray = [] 
 
@@ -172,7 +185,7 @@ class ContactInfo extends Component {
                 { this.state.formActive ? (
                 <form style={{ marginRight: '2rem'}} onSubmit={(e) => this.submitContactData(e)}>
                     { form }
-                    <Button>Confirm</Button>
+                    <Button clicked={this.addContactInfo}>Confirm</Button>
                 </form>
                 ) :  contactSheet 
                 }
@@ -181,4 +194,10 @@ class ContactInfo extends Component {
     }
 }
 
-export default ContactInfo;
+const mapDispatchToProps = dispatch => {
+    return {
+        addContactInfo: (info) => dispatch(actionCreators.addUserInfo(info))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(ContactInfo);

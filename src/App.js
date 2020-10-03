@@ -7,24 +7,33 @@ import ProductShow from './containers/ProductShow/ProductShow'
 import Cart from './containers/Cart/Cart'
 import Checkout from './containers/Checkout/Checkout'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, withRouter } from 'react-router-dom'
 
-function App() {
+function App({ location }) {
   return (
     <div className="App">
       <Layout>
-       
-              <Switch>
+        <TransitionGroup className="transition-group">
+          <CSSTransition
+            key={location.key}
+            timeout={300}
+            classNames={'fade'}
+          >
+            <section className="route-section">
+              <Switch location={location}>
                 <Route path="/" exact component={Homepage} />
                 <Route path="/products" exact component={ProductList} />
                 <Route path="/products/:id" exact component={ProductShow} />
                 <Route path="/cart" exact component={Cart} />
                 <Route path="/checkout" exact component={Checkout} />
               </Switch>
+            </section>
+          </CSSTransition>
+        </TransitionGroup>
 
       </Layout>
     </div>
   );
 }
 
-export default App;
+export default withRouter(App);

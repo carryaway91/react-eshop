@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux'
 import styles from './ProductList.module.css'
 import * as actionTypes from '../../store/actions/actionTypes'
@@ -7,6 +7,7 @@ import ProductItem from '../../components/ProductItem/ProductItem'
 import ProductFilters from '../../components/ProductFilters/ProductFilters'
 
 import * as actionCreators from '../../store/actions/index'
+import Spinner from '../../components/UI/Spinner/Spinner';
 class ProductList extends Component {
     
     state = { 
@@ -14,15 +15,9 @@ class ProductList extends Component {
     }
 
     componentDidMount = () => {
-
         this.props.fetchProducts()
-        //this.props.setFilteredProducts()
-        //this.props.showTopRated()
     }
 
-    componentDidUpdate = (prevProps, prevState) => {
-       
-    }
     renderProductList = () => {
         if(this.props.filteredProducts) {
 
@@ -31,7 +26,7 @@ class ProductList extends Component {
             product={product} />
         ))
         } else {
-            return <p>Loading ...</p>
+            return <Spinner />
         }
     }
 
@@ -95,13 +90,15 @@ class ProductList extends Component {
 
     render() {
         return (
-            <div className={styles.ProductList}>
+            <Fragment>
                 <ProductFilters setBrandSearch={this.handleSearchByBrand} 
                 setAllBrands={this.handleShowAllBrands}
                 onSelect={this.handleSelector}
                 />
-                { this.renderProductList() }
-            </div>
+                <div className={styles.ProductList}>                    
+                    { this.renderProductList() }
+                </div>
+            </Fragment>
         );
     }
 }

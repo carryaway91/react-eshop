@@ -3,7 +3,12 @@ import { Link } from 'react-router-dom'
 import styles from './UserItem.module.css'
 import { connect } from 'react-redux'
 import { useEffect } from 'react'
+import * as actionCreators from '../../../store/actions/index'
 const UserItems = (props) => {
+
+    useEffect(() => {
+        props.loadCartItems()
+    }, [])
 
     const renderCartLength = () => {
         if(props.cartLength.length > 0) {
@@ -53,4 +58,10 @@ const mapStateToProps = state => {
         cartLength: state.cart.cart
     }
 }
-export default connect(mapStateToProps)(UserItems)
+
+const mapDispatchToProps = dispatch => {
+    return {
+        loadCartItems: () => dispatch(actionCreators.loadCartItems())
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(UserItems)

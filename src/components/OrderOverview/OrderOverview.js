@@ -11,6 +11,10 @@ const OrderOverview = (props) => {
     let cartItems = props.cartItems.map(item => (
         <CartItem product={item} />
     ))
+
+    if(props.cartItems.length == 0) {
+        cartItems = <p>No items in cart</p>
+    }
     return (
         <div>
             <h2>Order summary</h2>

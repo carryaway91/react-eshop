@@ -9,6 +9,7 @@ import * as actionCreators from '../../store/actions/index'
 
 import { CSSTransition } from 'react-transition-group'
 import { Link } from 'react-router-dom';
+import Spinner from '../../components/UI/Spinner/Spinner';
 
 class Homepage extends Component {
 
@@ -22,7 +23,6 @@ class Homepage extends Component {
 
         return (
             <div className={styles.Homepage}>
-                
                 { displayed && (
                     <Fragment>
                 <div className={styles.Details}>

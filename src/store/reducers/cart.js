@@ -65,12 +65,17 @@ const updateCartAmount = (state, action) => {
     return updateObject(state, { totalPrice: tp})
 }
 
+const clearCart = (state, action) => {
+    localStorage.setItem('cartItems', JSON.stringify([]))
+    return updateObject(state, { cart: [] })
+}
 const cartReducer = ( state = initialState, action) => {
     switch (action.type) {
         case actionTypes.ADD_TO_CART: return addToCart(state, action)
         case actionTypes.LOAD_CART_ITEMS: return loadCartItems(state,action) 
         case actionTypes.REMOVE_CART_ITEM: return removeCartItem(state, action)
         case actionTypes.UPDATE_AMOUNT: return updateCartAmount(state, action)
+        case actionTypes.CLEAR_CART: return clearCart(state, action)
         default: return state
     }
 }

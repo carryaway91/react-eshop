@@ -18,7 +18,7 @@ const OrderSummary = (props) => {
                     <span>Total: </span><span style={{ fontWeight: 'bold'}}>{ props.totalPrice } &euro;</span>
                 </section>
             </div>
-            <Button clicked={goToCheckout}>Checkout</Button>
+            <Button disabled={props.cartItems.length == 0} clicked={goToCheckout}>Checkout</Button>
         </div>
     )
 }
@@ -29,4 +29,6 @@ const mapStateToProps = state => {
         totalPrice: state.cart.totalPrice
     }
 }
+
+
 export default withRouter(connect(mapStateToProps)(OrderSummary))

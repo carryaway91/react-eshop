@@ -5,13 +5,13 @@
 .Input {
     border: none;
     width: 20rem;
-    padding: .5rem .7rem
+    padding: .5rem .7rem;
+    margin-bottom: 1rem
 }
 
 .Label {
     display: block;
     text-align: left;
-    margin-top: 1rem;
     font-weight: bold;
     margin-bottom: .5rem;
     text-transform: capitalize;

@@ -4,7 +4,7 @@
 
 ::selection {
   color: white;
-  background: black
+  background: rgb(11, 47, 148)
 }
 body {
   margin: 0;
@@ -17,25 +17,32 @@ body {
   min-height: 100vh
 }
 
-.fade-appear,
+
 .fade-enter {
-  opacity: 0;
-  z-index: 1
+  opacity: 0.01;
 }
 
-.fade-appear-active,
-.fade-enter,
-.fade-enter-active {
+.fade-enter.fade-enter-active {
   opacity: 1;
-  transition: opacity 300ms linear 150ms
+  transition: opacity 300ms ease-in;
 }
 
 .fade-exit {
-  opacity: 1
+  opacity: 1;
 }
 
-.fade-exit,
-.fade-exit-active {
-  opacity: 0;
-  transition: opacity 150ms linear
+.fade-exit.fade-exit-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+
+.transition-group {
+  position: relative;
+}
+
+.route-section {
+  position: relative;
+  width: 100%;
+  top: 0;
+  left: 0;
 }

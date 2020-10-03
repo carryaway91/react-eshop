@@ -24,3 +24,8 @@ export {
     loadCartItems,
     removeCartItem
 } from './cartAction'
+
+export {
+    addUserInfo,
+    placeOrder
+} from './orders'

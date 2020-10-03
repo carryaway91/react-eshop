@@ -6,6 +6,7 @@ import MemoryVariant from '../../components/MemoryVariant/MemoryVariant'
 import RatingPanel from '../../components/RatingPanel/RatingPanel'
 import * as actionCreators from '../../store/actions/index'
 import Tabs from '../../components/Tabs/Tabs';
+import Spinner from '../../components/UI/Spinner/Spinner';
 
 class ProductShow extends Component {
 
@@ -42,7 +43,10 @@ class ProductShow extends Component {
     renderMobile = () => {
         if(this.props.mobile) {
             return (
+
                 <div className={styles.Product_display}>
+
+
                     <div className={styles.Product_img_wrap}>
                         <div className={styles.Displayed_wrap}>
                             <img className={styles.Displayed} src={this.props.displayed} />
@@ -84,9 +88,10 @@ class ProductShow extends Component {
                         </ul>
                     </div>
                 </div>
+
             )
         } else {
-            return <p>Loading ...</p>
+            return <Spinner />
         }
     }
     render() {

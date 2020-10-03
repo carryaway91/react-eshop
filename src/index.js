@@ -8,6 +8,7 @@ import { createStore, combineReducers, compose, applyMiddleware } from 'redux'
 import products from './store/reducers/products'
 import sliderReducer from './store/reducers/sliderReducer'
 import cartReducer from './store/reducers/cart'
+import orderReducer from './store/reducers/orders'
 
 import thunk from 'redux-thunk'
 import { BrowserRouter } from 'react-router-dom'
@@ -15,7 +16,8 @@ import { BrowserRouter } from 'react-router-dom'
 const rootReducer = combineReducers({
   products: products,
   slider: sliderReducer,
-  cart: cartReducer 
+  cart: cartReducer,
+  order: orderReducer
 })
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(rootReducer, composeEnhancer(applyMiddleware(thunk)))
