@@ -20,7 +20,7 @@ const UserItems = (props) => {
     return (
         <div style={{ width: '35px'}}>
 
-        <Link to="/react-shop/cart" className={styles.Cart}>
+        <Link to="/cart" className={styles.Cart}>
             <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
                 viewBox="0 0 512 512" fill="#ffc400">
             <g>

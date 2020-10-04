@@ -24,7 +24,7 @@ const CartItem = (props) => {
         <div className={styles.ItemContainer}>
         <div style={{ display: 'flex', alignItems: 'center'}}>
                 <Link to={`/react-shop/products/${props.product.product.id}`} style={{ textDecoration: 'none'}}>
-                    <img className={styles.ProductImage} src={ props.product.product.images.displayed } />
+                    <img className={styles.ProductImage} src={ process.env.PUBLIC_URL + props.product.product.images.displayed } />
                 </Link>
                 <div style={{ marginLeft: '1rem'}}>
                 <Link to={`/react-shop/products/${props.product.product.id}`} style={{ textDecoration: 'none', color: 'black'}}>

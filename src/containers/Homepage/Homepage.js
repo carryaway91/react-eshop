@@ -49,7 +49,7 @@ class Homepage extends Component {
                                 <li className={styles.Product_details_item}>{ displayed.details.camera} MPX camera</li>
                             </ul>
                             <div className={styles.MoreLinkWrap}>
-                                <Link to={`/react-eshop/products/${displayed.id}`} className={styles.MoreLink}>See more!</Link>
+                                <Link to={`/products/${displayed.id}`} className={styles.MoreLink}>See more!</Link>
                             </div>
                         </div>
                     </CSSTransition>
@@ -57,7 +57,6 @@ class Homepage extends Component {
                 
                 <div className={styles.Display}>
                     <div className={styles.Display_img}>
-
                     <CSSTransition in={show}
                         timeout={500}
                         classNames="disappear"
@@ -65,12 +64,12 @@ class Homepage extends Component {
                         >
                             <div>
                                 <div className={styles.Displayed}>
-                                    <img src={displayed.images.displayed} className={styles.Displayed_img}/>
+                                    <img src={process.env.PUBLIC_URL + displayed.images.displayed} className={styles.Displayed_img}/>
                                 </div>
 
                                 <div className={styles.Underlay}>
                                     <div>
-                                        <img className={styles.Underlay_pic} src={displayed.images.displayed} />
+                                        <img className={styles.Underlay_pic} src={ process.env.PUBLIC_URL + displayed.images.displayed} />
                                     </div>
                                 </div>
                             </div>

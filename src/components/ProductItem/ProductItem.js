@@ -9,14 +9,14 @@ const ProductItem = (props) => {
     
     return (
         <div className={styles.ProductItem}>
-            <img src={product.images.displayed} className={styles['Product-img']} />
+            <img src={process.env.PUBLIC_URL + product.images.displayed} className={styles['Product-img']} />
             <div className={styles['Product-info']}>
                 <h3 className={styles['Product-brand']}>{ product.brand }</h3>
                 <p className={ styles["Product-brand"]}>{ product.model }</p>   
                 <RatingPanel rating={product.stars} />
                 <p className={styles.Pricing}>{ product.pricing } &euro;</p>
 
-                <Link to={`/react-shop/products/${product.id}`} className={styles["Info-link"]}>More Info</Link>                
+                <Link to={`/products/${product.id}`} className={styles["Info-link"]}>More Info</Link>                
             </div>
         </div>
     )

@@ -81,8 +81,7 @@ class Mobile extends Component {
         return (
             <div ref={this.itemRef}>
                 <div className={classes.join(' ')}>
-                    <img className={styles.Preview_side_imgs} src={mobile.images.displayed}
-                        //onClick={() => this.onClick(mobile.id, index)}
+                    <img className={styles.Preview_side_imgs} src={process.env.PUBLIC_URL + mobile.images.displayed}
                     />
                 </div>
             </div>

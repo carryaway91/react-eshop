@@ -37,7 +37,7 @@ class ProductShow extends Component {
 
     goToCart = () => {
         this.props.addToCart(this.props.mobile, this.props.colorVariant, this.props.memoryVariant, this.props.price)
-this.props.history.push('/react-shop/cart')
+this.props.history.push('/cart')
     }
 
     renderMobile = () => {
@@ -49,12 +49,12 @@ this.props.history.push('/react-shop/cart')
 
                     <div className={styles.Product_img_wrap}>
                         <div className={styles.Displayed_wrap}>
-                            <img className={styles.Displayed} src={this.props.displayed} />
+                            <img className={styles.Displayed} src={process.env.PUBLIC_URL + this.props.displayed} />
                         </div>
                         <ul className={styles.Preview}>
                             { this.props.mobile.images.preview_imgs.map((img, i) => (
                                 <li className={styles.Preview_img_wrap} key={i}>
-                                    <img className={styles.Preview_img} src={img} onMouseEnter={() => this.props.changePreviewImg(img)}/>
+                                    <img className={styles.Preview_img} src={process.env.PUBLIC_URL + img} onMouseEnter={() => this.props.changePreviewImg(img)}/>
                                 </li>
                             )) }
                         </ul>

@@ -11,7 +11,7 @@ import cartReducer from './store/reducers/cart'
 import orderReducer from './store/reducers/orders'
 
 import thunk from 'redux-thunk'
-import { BrowserRouter } from 'react-router-dom'
+import { HashRouter } from 'react-router-dom'
 
 const rootReducer = combineReducers({
   products: products,
@@ -24,11 +24,11 @@ const store = createStore(rootReducer, composeEnhancer(applyMiddleware(thunk)))
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <HashRouter>
     <Provider store={store}>
       <App />
     </Provider>
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
