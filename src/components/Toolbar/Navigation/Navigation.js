@@ -8,7 +8,7 @@ const Navigation = () => {
         <nav className={styles.TheNavigation}>
             <Logo />
             <ul>
-                <li><NavLink activeClassName={styles.ActiveLink} to="/products" exact>Prodducts</NavLink></li>
+                <li><NavLink activeClassName={styles.ActiveLink} to="/products" exact>Products</NavLink></li>
             </ul>
         </nav>
     )
