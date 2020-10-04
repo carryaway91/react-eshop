@@ -140,7 +140,10 @@ class ContactInfo extends Component {
     addContactInfo = () => {
         const userInfo = {
             name: this.state.contactForm.name.value,
-            address: this.state.contactForm.address.value
+            address: this.state.contactForm.address.value,
+            city: this.state.contactForm.city.value,
+            postal: this.state.contactForm.postal.value,
+            country: this.state.contactForm.country.value
         }   
         this.props.addContactInfo(userInfo)
         }
