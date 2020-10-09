@@ -120,7 +120,6 @@ const mapDispatchToProps = dispatch => {
         showCheapest: () => dispatch(actionCreators.showCheapest()),
         showMostExpensive: () => dispatch(actionCreators.showMostExpensive()),
         showTopRated: () => dispatch(actionCreators.showTopRated())
-
     }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(ProductList);

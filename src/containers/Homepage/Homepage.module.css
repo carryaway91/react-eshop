@@ -120,3 +120,76 @@
     border: none;
     background-color: #ffc400
 }
+
+.RightArrow, .LeftArrow {
+    display: none
+}
+@media (max-width: 810px) {
+    .Product_name {
+        font-size: 2rem;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .Display_img {
+        margin: 0 auto
+    }
+
+    .Details {
+        margin: 0
+    }
+    .Product_name_model::before {
+        display: none
+    }
+    .Product_details_list {
+        display:none
+    }
+    .Underlay {
+        display: none
+    }
+    .Homepage {
+        flex-direction: column-reverse;
+    }
+
+    .Display {
+        flex-direction: column;
+    }
+
+    .MoreLinkWrap {
+        width: 180px
+    }
+
+    .MoreLink {
+        padding: 1rem .5rem 
+    }
+
+    .RightArrow, .LeftArrow {
+        display: inline-block;
+        cursor: pointer
+    }
+
+    .LeftArrow {
+        margin-right: 1rem;
+    }
+
+    .RightArrow {
+        margin-left: 1rem
+    }
+
+    .MobileSlider {
+        display: flex;
+        justify-content: center;
+    }
+
+   
+}
+
+@media (max-width: 1000px) {
+    .MoreLinkWrap {
+        width: 100%
+    }
+
+    .Product_name {
+        font-size: 3rem;
+    }
+}

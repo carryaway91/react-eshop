@@ -202,3 +202,18 @@
         top:70%;
         opacity: .2
     }
+
+    @media (max-width: 810px) {
+        .Product_display {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .Product_details_wrap {
+            margin: 0 auto
+        }
+
+        .Product_img_wrap {
+            margin: 0 auto
+        }
+    }

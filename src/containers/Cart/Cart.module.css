@@ -5,3 +5,9 @@
 .CartItems {
     flex: 3
 }
+
+@media (max-width: 810px) {
+    .Cart {
+        flex-direction: column;
+    }
+}

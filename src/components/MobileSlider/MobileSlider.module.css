@@ -55,3 +55,15 @@
 .Scroll-move {
     transition: all .5s
 }
+
+@media (max-width: 1150px) {
+    .Slider {
+        padding-right: 1rem
+    }
+}
+@media (max-width: 810px) {
+   
+    .Slider {
+        display: none
+    }
+}

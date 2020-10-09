@@ -2,5 +2,10 @@
     display: flex;
     justify-content: left;
     flex-wrap: wrap;
+}
 
+@media (max-width: 1090px) {
+    .ProductList {
+        justify-content: center;
+    }
 }

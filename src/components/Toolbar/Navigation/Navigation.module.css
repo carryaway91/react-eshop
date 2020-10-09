@@ -20,3 +20,9 @@
     padding-bottom: 4px;
     border-bottom: 2px solid rgba(255, 255, 255, 0.836)
 }
+
+@media (max-width: 1160px) {
+    .TheNavigation {
+        padding: 0 1rem
+    }
+}

@@ -14,7 +14,7 @@ class MobileSlider extends Component {
         })
     }
    
-    renderProductItems = () => {
+renderProductItems = () => {
         if(this.props.products !== null) {
         return this.props.products.map((p, i) => {
             return <Mobile

@@ -30,7 +30,7 @@ class Checkout extends Component {
         return (
             <div>
                 <ContactInfo />
-                <div style={{ display: 'flex'}}>
+                <div className={styles.Summary} >
                     <OrderOverview/>
                     <div style={{ flex: '1', textAlign:'right'}}>
                         <p style={{ marginTop: '1.5rem'}}><strong>Amount to pay: </strong> { this.props.totalPrice } &euro;</p>

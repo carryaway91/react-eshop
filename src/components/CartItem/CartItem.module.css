@@ -26,3 +26,9 @@
 .Trashcan:hover {
     cursor: pointer;
 }
+
+@media (max-width: 810px) {
+    .ItemContainer {
+        margin: 1rem
+    }
+}
