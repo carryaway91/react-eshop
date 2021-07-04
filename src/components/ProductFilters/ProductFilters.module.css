@@ -7,3 +7,17 @@
 .BrandFilter {
     margin-right: .7rem
 }
+
+.FilterContainer {
+    margin-left: 2rem
+}
+
+@media(max-width: 480px) {
+    .ProductFilters {
+        flex-direction: column-reverse;
+    }
+
+    .FilterContainer {
+        margin-left: 1rem
+    }
+}

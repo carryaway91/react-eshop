@@ -26,3 +26,14 @@
         padding: 0 1rem
     }
 }
+
+@media(max-width: 430px) {
+    .TheNavigation {
+        padding: 0
+    }
+}
+@media(max-width: 330px) {
+    .Ul {
+        padding-left: .5rem
+    }
+}

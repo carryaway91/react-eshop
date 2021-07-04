@@ -5,8 +5,18 @@
     display: flex
 }
 
+.Amount {
+    flex: 1;
+    text-align: right;
+}
+
+
 @media (max-width: 750px) {
     .Summary {
         flex-direction: column;
     }
+    .Amount {
+        text-align: center;
+    }
+
 }

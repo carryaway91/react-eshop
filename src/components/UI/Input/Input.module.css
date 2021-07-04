@@ -9,6 +9,11 @@
     margin-bottom: 1rem
 }
 
+@media(max-width: 450px) {
+    .Input {
+        width: 100%
+    }
+}
 .Label {
     display: block;
     text-align: left;

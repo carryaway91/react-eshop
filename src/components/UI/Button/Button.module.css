@@ -9,6 +9,12 @@
     border: none
 }
 
+@media(max-width: 300px) {
+    .BUtton {
+        width: 100%
+    }
+}
+
 .Button:hover {
     cursor: pointer
 }

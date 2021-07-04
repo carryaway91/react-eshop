@@ -7,7 +7,7 @@ const Navigation = () => {
     return (
         <nav className={styles.TheNavigation}>
             <Logo />
-            <ul>
+            <ul className={styles.Ul}>
                 <li><NavLink activeClassName={styles.ActiveLink} to="/products" exact>Products</NavLink></li>
             </ul>
         </nav>

@@ -32,7 +32,7 @@ class Checkout extends Component {
                 <ContactInfo />
                 <div className={styles.Summary} >
                     <OrderOverview/>
-                    <div style={{ flex: '1', textAlign:'right'}}>
+                    <div className={styles.Amount}>
                         <p style={{ marginTop: '1.5rem'}}><strong>Amount to pay: </strong> { this.props.totalPrice } &euro;</p>
                         <Button disabled={this.props.userInfo == null || this.props.cartItems.length == 0 } clicked={() => this.props.placeOrder(this.props.cartItems, this.props.userInfo, this.state.ownProps)}> Place an order!</Button>
                     </div>

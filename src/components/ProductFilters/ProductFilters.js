@@ -23,7 +23,7 @@ render() {
                    </div>
                 </div>
                 </div>
-                <div style={{ marginLeft: '2rem'}}>
+                <div className={styles.FilterContainer}>
                     <h3 style={{ textAlign:'left'}}>Filter</h3>
                     <select style={{ padding: '0 .2rem' }}name="selector" id="selector" onChange={this.props.onSelect}>
                         <option value="cheapest">Cheapest</option>
